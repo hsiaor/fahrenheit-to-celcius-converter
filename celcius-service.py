@@ -1,7 +1,5 @@
 import os
 
-# Get the file path
-file_path = os.path.join(os.path.dirname(__file__), 'temperature.txt')
 
 # Read the Fahrenheit value from the file
 with open('fahrenheit-to-celcius.txt', 'r') as file:
