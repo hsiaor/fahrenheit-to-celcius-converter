@@ -21,4 +21,6 @@ This microservice converts temperatures from Fahrenheit to Celcius. Use the Clie
 
 4. Wait for the microservice to return the temperature in Celcius.
 
-## UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your teammate (and your grader) will understand.
+## UML sequence diagram showing how requesting and receiving data works
+
+![UML](sequence-diagram.svg)
