@@ -1,20 +1,24 @@
 # Fahrenheit to Celcius Converter
 ---
 
-Clear instructions for how to programmatically REQUEST data from the microservice you implemented. Include an example call.
+This microservice converts temperatures from Fahrenheit to Celcius.
 
-## How to programmatically REQUEST data from the microservice
+## How to programmatically REQUEST and RECEIVE data from the microservice
 
-1. Open a terminal and start the server program by running:
+1. Open a terminal and start the Server program by running:
 
     ```sh
     python celcius_server.py
     ```
 
-2. At the prompt, enter the temperature in Fahrenheit.
+2. Open a NEW terminal and start the Client program by running:
 
-3. Wait for the microserver to return the temperature in Celcius.
+    ```sh
+    python celcius_client.py
+    ```
 
-## Clear instructions for how to programmatically RECEIVE data from the microservice you implemented.
+3. At the prompt in the Client program terminal, enter the temperature in Fahrenheit.
+
+4. Wait for the microservice to return the temperature in Celcius.
 
 ## UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your teammate (and your grader) will understand.
