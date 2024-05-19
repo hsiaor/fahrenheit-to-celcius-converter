@@ -1,17 +1,15 @@
-import time
+import os
 
-def farenheit_to_celcius(num):
-	celcius = (farenheit - 32) * 5 / 9
-	# print("Temperature in Celsius:", round(celcius,3))
-	return round(celcius,3)
+# Get the file path
+file_path = os.path.join(os.path.dirname(__file__), 'temperature.txt')
 
-# farenheit = 50
-# farenheit_to_celcius(farenheit)
+# Read the Fahrenheit value from the file
+with open('farenheit-to-celcius.txt', 'r') as file:
+    fahrenheit = float(file.read().strip())
 
-while True:
-	time.sleep(1)
-	with open("farenheit-to-celcius.txt", r) as file:
-		farenheit = file.readlines()
-        farenheit_to_celcius(farenheit)
-	
-		
+# Convert Fahrenheit to Celsius
+celsius = round((fahrenheit - 32) * 5/9)
+
+# Write the Celsius value back to the file
+with open('farenheit-to-celcius.txt', 'w') as file:
+    file.write(str(celsius))
