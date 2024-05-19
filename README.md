@@ -1,5 +1,4 @@
 # Fahrenheit to Celcius Converter
----
 
 This microservice converts temperatures from Fahrenheit to Celcius. Use the Client program to request and receive the converted temperature from the Server program.
 
