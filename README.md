@@ -2,6 +2,10 @@
 
 This microservice converts temperatures from Fahrenheit to Celcius. Use the Client program to request and receive the converted temperature from the Server program.
 
+## Prerequisites
+
+Before you beging, ensure you have RabbitMQ installed and running locally on localhost standard port (5672). For more informatoin, see the [RabbitMQ documentation](https://www.rabbitmq.com/tutorials/tutorial-one-python#prerequisites).
+
 ## How to programmatically REQUEST and RECEIVE data from the microservice
 
 1. Open a terminal and start the Server program by running:
