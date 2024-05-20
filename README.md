@@ -16,7 +16,27 @@ This microservice converts temperatures from Fahrenheit to Celcius. Use the Clie
     python celcius_client.py
     ```
 
-3. At the prompt in the Client program terminal, enter the temperature in Fahrenheit.
+3. Send a request with Fahrenheit temperature (type: int) to the Server using one of the following options:
+
+    * At the prompt in the Client program terminal, enter the temperature in Fahrenheit.
+
+        ![sample-client-cli](sample-client-cli-call.png)
+
+    * Import the `celcius_client.py` into your won program file and use the `call` method to send the request.
+
+        ```py
+        # test.py
+
+        import celcius_client
+
+        get_celcius = celcius_client.CelciusClient()
+
+        fahrenheit = 32
+
+        response = get_celcius.call(fahrenheit)
+        print("Temperature in Celcius:",str(response))
+
+        ```
 
 4. Wait for the microservice to return the temperature in Celcius.
 
