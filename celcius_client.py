@@ -43,6 +43,8 @@ class CelciusClient(object):
 
 
 if __name__ == "__main__":
+    """Example test program"""
+
     get_celcius = CelciusClient()
 
     while True:

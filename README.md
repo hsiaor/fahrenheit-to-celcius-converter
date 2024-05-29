@@ -6,6 +6,12 @@ This microservice converts temperatures from Fahrenheit to Celcius. Use the Clie
 
 Before you beging, ensure you have RabbitMQ installed and running locally on localhost standard port (5672). For more informatoin, see the [RabbitMQ documentation](https://www.rabbitmq.com/tutorials/tutorial-one-python#prerequisites).
 
+If using the Docker image, you can open a terminal and run:
+
+```
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
+```
+
 ## How to programmatically REQUEST and RECEIVE data from the microservice
 
 1. Open a terminal and start the Server program by running:
