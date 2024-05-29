@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#client program
 import pika
 import uuid
 

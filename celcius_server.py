@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#server program
 import pika
 
 connection = pika.BlockingConnection(
