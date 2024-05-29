@@ -91,6 +91,24 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
 
 4. Send a request with Fahrenheit temperature (type: int) to the Server using the example test program:
 
+    ```py
+
+        if __name__ == "__main__":
+            """Example test program"""
+
+            get_celcius = CelciusClient()
+
+            while True:
+                user_input = input("Enter temperature in Fahrenheit: ")
+
+                if user_input.isdigit():
+                    response = get_celcius.call(user_input)
+                    print("Temperature in Celcius:",str(response))
+                else:
+                    print("Unknown option. Please try again.")
+
+    ```
+
     1. At the prompt in the Client program terminal, enter the temperature in Fahrenheit.
 
         ![sample-client-cli](sample-client-cli-call.png)
