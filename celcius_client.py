@@ -42,18 +42,8 @@ class CelciusClient(object):
         return int(self.response)
 
 
-# get_celcius = CelciusClient()
-
-
-# def main():
-#     """
-#     Main function that runs the user interface loop.
-#     """
-    
-
-
 if __name__ == "__main__":
-    get_celcius = celcius_client.CelciusClient()
+    get_celcius = CelciusClient()
 
     while True:
         user_input = input("Enter temperature in Fahrenheit: ")
