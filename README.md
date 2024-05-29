@@ -60,21 +60,6 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
                     self.connection.process_data_events(time_limit=None)
                 return int(self.response)
 
-
-        if __name__ == "__main__":
-            """Example test program"""
-
-            get_celcius = CelciusClient()
-
-            while True:
-                user_input = input("Enter temperature in Fahrenheit: ")
-
-                if user_input.isdigit():
-                    response = get_celcius.call(user_input)
-                    print("Temperature in Celcius:",str(response))
-                else:
-                    print("Unknown option. Please try again.")
-
     ```
 
 21. Open a terminal and start the Server program by running:
