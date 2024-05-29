@@ -16,7 +16,7 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
 
 1. Create a `CelciusClient()` class in the requesting (client) program that has a `call` method to send the request. For example:
 
-        ```py
+    ```py
         #client program
         import pika
         import uuid
@@ -75,7 +75,7 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
                 else:
                     print("Unknown option. Please try again.")
 
-        ```
+    ```
 
 21. Open a terminal and start the Server program by running:
 
