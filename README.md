@@ -17,7 +17,7 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
 1. Create a `CelciusClient()` class in the requesting (client) program that has a `call` method to send the request. For example:
 
     ```py
-        #client program
+        #client program and 
         import pika
         import uuid
 
@@ -50,7 +50,7 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
                 self.corr_id = str(uuid.uuid4())
                 self.channel.basic_publish(
                     exchange='',
-                    routing_key='rpc_queue',
+                    routing_key='celcius_queue',
                     properties=pika.BasicProperties(
                         reply_to=self.callback_queue,
                         correlation_id=self.corr_id,
@@ -59,24 +59,6 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
                 while self.response is None:
                     self.connection.process_data_events(time_limit=None)
                 return int(self.response)
-
-    ```
-
-21. Open a terminal and start the Server program by running:
-
-    ```sh
-    python celcius_server.py
-    ```
-
-3. Open a NEW terminal and start the Client program by running:
-
-    ```sh
-    python celcius_client.py
-    ```
-
-4. Send a request with Fahrenheit temperature (type: int) to the Server using the example test program:
-
-    ```py
 
         if __name__ == "__main__":
             """Example test program"""
@@ -93,6 +75,20 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-ma
                     print("Unknown option. Please try again.")
 
     ```
+
+2. Open a terminal and start the Server program by running:
+
+    ```sh
+    python celcius_server.py
+    ```
+
+3. Open a NEW terminal and start the Client program by running:
+
+    ```sh
+    python celcius_client.py
+    ```
+
+4. To send a request with Fahrenheit temperature (type: int) to the Server using the example test program:
 
     1. At the prompt in the Client program terminal, enter the temperature in Fahrenheit.
 
